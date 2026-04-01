@@ -66,24 +66,52 @@ const StickyCTA = () => {
   }, []);
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div 
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
-          exit={{ y: 100 }}
-          className="fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-gray-200 z-[60] md:hidden shadow-[0_-4px_10px_rgba(0,0,0,0.1)]"
-        >
-          <a 
-            href="https://go.wisecombo.com/click"
-            className="flex items-center justify-center gap-2 w-full bg-[#2B9A0A] text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform"
-          >
-            <CheckCircle2 className="w-5 h-5" />
-            Try NoBark for 63% Off Today
-          </a>
-        </motion.div>
-      )}
-    </AnimatePresence>
+const StickyCTA = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      if (scrollHeight <= 0) {
+        setIsVisible(false);
+        return;
+      }
+
+      const scrollPercent = (window.scrollY / scrollHeight) * 100;
+      setIsVisible(scrollPercent > 30);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <div
+      className={[
+        "fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-gray-200 z-[60] md:hidden shadow-[0_-4px_10px_rgba(0,0,0,0.1)]",
+        "transition-all duration-300 ease-out",
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "translate-y-full opacity-0 pointer-events-none",
+      ].join(" ")}
+      aria-hidden={!isVisible}
+    >
+      <a
+        href="https://go.wisecombo.com/click"
+        className="flex items-center justify-center gap-2 w-full bg-[#2B9A0A] text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform"
+      >
+        <CheckCircle2 className="w-5 h-5" />
+        Try NoBark for 63% Off Today
+      </a>
+    </div>
+  );
+};
   );
 };
 
