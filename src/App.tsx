@@ -58,19 +58,6 @@ const StickyCTA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      setIsVisible(scrollPercent > 30);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-const StickyCTA = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
       const scrollHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
@@ -110,8 +97,6 @@ const StickyCTA = () => {
         Try NoBark for 63% Off Today
       </a>
     </div>
-  );
-};
   );
 };
 
@@ -265,6 +250,7 @@ const HowToUse = () => {
     </div>
   );
 };
+
 const FAQSection = () => {
   const faqs = [
     {
@@ -312,19 +298,16 @@ export default function App() {
     { name: "Linda Thompson", avatar: "https://picsum.photos/seed/linda/100/100", text: "Just ordered mine with the 63% discount. Can't wait to try it on my loud beagles!", time: "8h ago", likes: 3, timestamp: Date.now() - 8 * 60 * 60 * 1000 },
     { name: "David Miller", avatar: "https://picsum.photos/seed/david/100/100", text: "I've tried everything, from shock collars to expensive trainers. This is the only thing that worked without scaring my dog.", time: "10h ago", likes: 25, timestamp: Date.now() - 10 * 60 * 60 * 1000 },
     { name: "Emily Chen", avatar: "https://picsum.photos/seed/emily/100/100", text: "The delivery was super fast. It arrived in 2 days and I started using it immediately. Highly recommend!", time: "12h ago", likes: 7, timestamp: Date.now() - 12 * 60 * 60 * 1000 },
-    // Load 1
     { name: "James Wilson", avatar: "https://picsum.photos/seed/james/100/100", text: "My dog used to jump on everyone who walked through the door. Now he sits calmly when I use the NoBark. It's a game changer.", time: "1d ago", likes: 12, timestamp: Date.now() - 1 * 24 * 60 * 60 * 1000 },
     { name: "Jessica Taylor", avatar: "https://picsum.photos/seed/jessica/100/100", text: "I love that it's humane. I would never use a shock collar, so this was the perfect alternative.", time: "1d ago", likes: 9, timestamp: Date.now() - 1.1 * 24 * 60 * 60 * 1000 },
     { name: "Robert Brown", avatar: "https://picsum.photos/seed/robert/100/100", text: "Great product, great price. The 63% discount made it a no-brainer.", time: "1d ago", likes: 4, timestamp: Date.now() - 1.2 * 24 * 60 * 60 * 1000 },
     { name: "Karen White", avatar: "https://picsum.photos/seed/karen/100/100", text: "I was worried it would bother my other pets, but it only seems to affect the dog I'm pointing it at. Very precise!", time: "2d ago", likes: 15, timestamp: Date.now() - 2 * 24 * 60 * 60 * 1000 },
     { name: "Steven Hall", avatar: "https://picsum.photos/seed/steven/100/100", text: "Finally, some peace and quiet in the house. Thank you NoBark!", time: "2d ago", likes: 21, timestamp: Date.now() - 2.1 * 24 * 60 * 60 * 1000 },
-    // Load 2
     { name: "Nancy Adams", avatar: "https://picsum.photos/seed/nancy/100/100", text: "I bought three, one for each room. Now I'm always ready when the barking starts.", time: "3d ago", likes: 6, timestamp: Date.now() - 3 * 24 * 60 * 60 * 1000 },
     { name: "Paul Baker", avatar: "https://picsum.photos/seed/paul/100/100", text: "My vet actually recommended this to me. It's a very safe way to train your dog.", time: "3d ago", likes: 33, timestamp: Date.now() - 3.1 * 24 * 60 * 60 * 1000 },
     { name: "Sandra Clark", avatar: "https://picsum.photos/seed/sandra/100/100", text: "The battery lasts a long time too. I've been using it for a month and haven't had to change it yet.", time: "4d ago", likes: 11, timestamp: Date.now() - 4 * 24 * 60 * 60 * 1000 },
     { name: "Thomas Evans", avatar: "https://picsum.photos/seed/thomas/100/100", text: "I use it when we go for walks. It keeps my dog from pulling on the leash and barking at other dogs.", time: "4d ago", likes: 19, timestamp: Date.now() - 4.1 * 24 * 60 * 60 * 1000 },
     { name: "Lisa Foster", avatar: "https://picsum.photos/seed/lisa/100/100", text: "Best customer service ever. I had a question about how to use it and they answered me within an hour.", time: "5d ago", likes: 8, timestamp: Date.now() - 5 * 24 * 60 * 60 * 1000 },
-    // Load 3
     { name: "Kevin Garcia", avatar: "https://picsum.photos/seed/kevin/100/100", text: "My dog is a senior and I didn't think he could learn new tricks, but this worked like a charm.", time: "5d ago", likes: 14, timestamp: Date.now() - 5.1 * 24 * 60 * 60 * 1000 },
     { name: "Donna Harris", avatar: "https://picsum.photos/seed/donna/100/100", text: "I'm so glad I found this. It's made my life so much easier.", time: "6d ago", likes: 5, timestamp: Date.now() - 6 * 24 * 60 * 60 * 1000 },
     { name: "Brian Jackson", avatar: "https://picsum.photos/seed/brian/100/100", text: "I've already told all my friends about it. Everyone needs a NoBark!", time: "6d ago", likes: 27, timestamp: Date.now() - 6.1 * 24 * 60 * 60 * 1000 },
