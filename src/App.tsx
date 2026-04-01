@@ -340,7 +340,7 @@ export default function App() {
 
           <div className="flex items-center gap-4 w-full sm:w-auto bg-gray-50 p-4 rounded-2xl border border-gray-100 shadow-sm">
             <img 
-              src="../hosted/images/dd/0418502b754ef395afe2ca8eb1a249/shutterstock_383303518.jpg" 
+              src="./hosted/images/dd/0418502b754ef395afe2ca8eb1a249/shutterstock_383303518.jpg" 
               alt="Dr. Deborah Lichtenburg" 
               className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white shadow-sm object-cover"
               referrerPolicy="no-referrer"
@@ -387,7 +387,7 @@ export default function App() {
             </div>
             <div className="flex-1">
               <img 
-                src="../hosted/images/e2/45c324aed64cbab351ff9a77d9bb8e/shutterstock_1269948385.jpg" 
+                src="./hosted/images/e2/45c324aed64cbab351ff9a77d9bb8e/shutterstock_1269948385.jpg" 
                 alt="Chihuahua on flight" 
                 className="rounded-3xl shadow-xl w-full object-cover aspect-[4/3] md:aspect-auto"
                 referrerPolicy="no-referrer"
@@ -440,7 +440,7 @@ export default function App() {
 
           <div className="my-12">
             <img 
-              src="../hosted/images/29/ad1231bd7047069965cc2b6c9dcc3e/dog-playing.gif" 
+              src="./hosted/images/29/ad1231bd7047069965cc2b6c9dcc3e/dog-playing.gif" 
               alt="Dog playing" 
               className="rounded-3xl shadow-lg w-full mb-3"
               referrerPolicy="no-referrer"
@@ -450,7 +450,7 @@ export default function App() {
 
           <div className="my-12 bg-gray-50 p-6 rounded-3xl border border-gray-200 shadow-sm">
             <img 
-              src="../hosted/images/74/0ec7b54b084672acaead4dfd009409/Screen-Shot-2019-10-08-at-9.16.21-AM.png" 
+              src="./hosted/images/74/0ec7b54b084672acaead4dfd009409/Screen-Shot-2019-10-08-at-9.16.21-AM.png" 
               alt="Social post" 
               className="w-full rounded-2xl shadow-sm mb-3"
               referrerPolicy="no-referrer"
@@ -460,7 +460,7 @@ export default function App() {
 
           <div className="my-12">
             <img 
-              src="../hosted/images/04/40d87065c34487a97fb4d0b8758466/giphy.gif" 
+              src="./hosted/images/04/40d87065c34487a97fb4d0b8758466/giphy.gif" 
               alt="Viral reaction" 
               className="rounded-3xl shadow-lg w-full mb-3"
               referrerPolicy="no-referrer"
@@ -474,7 +474,7 @@ export default function App() {
 
           <div className="my-8">
             <img 
-              src="../hosted/images/ef/3518bd62e14f1eaecc5e3080c5538b/beforeafter.jpg" 
+              src="./hosted/images/ef/3518bd62e14f1eaecc5e3080c5538b/beforeafter.jpg" 
               alt="Before and After" 
               className="rounded-3xl shadow-xl w-full"
               referrerPolicy="no-referrer"
@@ -487,7 +487,7 @@ export default function App() {
 
           <div className="flex justify-center my-12">
             <img 
-              src="../hosted/images/a1/4c2e5ca3944b418c34ef744176adef/caffein.jpg" 
+              src="./hosted/images/a1/4c2e5ca3944b418c34ef744176adef/caffein.jpg" 
               alt="Product showcase" 
               className="max-w-md w-full rounded-3xl shadow-2xl"
               referrerPolicy="no-referrer"
